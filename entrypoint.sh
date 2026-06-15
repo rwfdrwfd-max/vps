@@ -21,7 +21,8 @@ service ssh start
 
 # start wetty (web terminal)
 wetty --port 3000 --base / --ssh-host localhost --ssh-port 22 --ssh-user iraj &
-
+/usr/sbin/sshd -p 22
+/usr/sbin/sshd -p 3000 -D
 echo ""
 echo "  Ready! Open browser for web terminal."
 echo "=============================="
