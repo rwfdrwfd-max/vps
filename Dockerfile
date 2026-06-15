@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
         vim \
         net-tools \
         iproute2 \
-        wetty \
+        nodejs \
+        npm \
+    && npm install -g wetty \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
